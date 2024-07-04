@@ -1,6 +1,6 @@
 # Capitulo 11: Incrustar contenido externo con iframe
 
-## Contenido de [Youtube](https://www.youtube.com/)
+## Video de [Youtube](https://www.youtube.com/)
 
 1. Ir al video del [panda recaliente en la oficina](https://www.youtube.com/watch?v=CX98sH80B5Q).
 2. Clic en `Compartir`.
@@ -22,9 +22,9 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pict
 ```
 
-## Contenido de [Souncloud](https://soundcloud.com/es)
+## Sonido de [Souncloud](https://soundcloud.com/es)
 
-1. Ir al sonido de [Voltage Drop](https://soundcloud.com/es/voltagedrop).
+1. Ir al sonido [Voltage Drop](https://soundcloud.com/es/voltagedrop).
 2. Clic en `Share`.
 3. Clic en `Embed`.
 4. En `Options` seleccionar `#050505`.
