@@ -1,11 +1,11 @@
 # Capitulo 10: Agrupadores
 
-## Tabla basica
+## En bloque y en linea
 
 1. Agregar:
 
 ```
-<h1>
+    <h1>
         Forma de agrupar
     </h1>
     <hr>
