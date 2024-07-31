@@ -1,45 +1,52 @@
-# Capitulo 1: Introduccion
+# Capitulo 1: Introducción
 
-## index.html
+## El archivo index.html
 
-Por convencion, los navegadores van a buscar un archivo llamado `index.html` como punto de ingreso a una pagina web.
+El archivo `index.html` es el punto de entrada a una pagina web. En el mismo, se ingresa código HTML para describir la estructura de la pagina.
 
 1. Crear una carpeta llamada `playground`.
 2. Crear un archivo llamado `index.html` dentro de la carpeta `playground`.
 
-Dentro de `index.html`, vamos a colocar nuestro codigo HTML. El mismo, va a describir la estructura de nuestra pagina web.
-
 ## Elementos
 
-HTML es un lenguje de elementos. Donde cada cada elemento puede contener a otros elementos o texto. Esto se conoce como anidamiento.
+El código HTML esta formado por elementos que pueden contener:
 
-Por ejemplo, un elemento podria ser: ```<h1 class="titulo">Titulo</h1>```. Cuyos componentes son:
+- Otros elementos, es decir, se permite el anidamiento de los mismos.
+- Texto.
 
-- Etiqueta de apertura ```<h1>```.
-- Atributo `class="titulo"`.
-- Texto `Titulo`.
-- Etiqueta de cierre ```</h1>```.
+El siguiente elemento, que contiene texto, se muestra con el fin de identificar su estructura semántica:
 
-## Estructura estandar
+`<h1 class="titulo">Titulo</h1>`.
 
-El elemento ```<html></html>```, es el elemento raiz de la pagina web.
+Donde vemos que tiene:
+
+- Una etiqueta de apertura `<h1>`.
+- Un atributo con un valor `class="titulo"`.
+- El texto `Titulo`.
+- Una etiqueta de cierre `</h1>`.
+
+## Estructura estándar por elementos anidados
+
+El elemento `<html></html>`, es el elemento raíz de la pagina web.
+
+Donde vemos que tiene:
 
 1. Ingresar `html` dentro del archivo `index.html`.
 2. Seleccionar `html:5`.
 
 ### Titulo de la pagina web
 
-Dentro del elemento ```<head></head>```, va la informacion de la pagina web. 
+Dentro del elemento `<head></head>`, va la informacion de la pagina web.
 
-El elemento ```<title></title>```, es parte de la informacion de la pagina web.
+El elemento `<title></title>`, es parte de la informacion de la pagina web.
 
-1. Ingresar `HTML Playground` como el texto del elemento ```<title></title>```.
+1. Ingresar `HTML Playground` como el texto del elemento `<title></title>`.
 
 ### Contenido de la pagina web
 
-Dentro del elemento ```<body></body>```, va el contenido de la pagina web.
+Dentro del elemento `<body></body>`, va el contenido de la pagina web.
 
-1. Ingresar ```<h1>Hola Mundo</h1>``` dentro del elemento ```<body></body>```.
+1. Ingresar `<h1>Hola Mundo</h1>` dentro del elemento `<body></body>`.
 
 ## Usar el Live Server
 
