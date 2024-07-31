@@ -22,7 +22,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pict
 ```
 
-## Sonido de [Souncloud](https://soundcloud.com/es)
+## Sonido de [Soundcloud](https://soundcloud.com/es)
 
 1. Ir al sonido [Voltage Drop](https://soundcloud.com/es/voltagedrop).
 2. Clic en `Share`.
@@ -93,4 +93,3 @@
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 ```
-
