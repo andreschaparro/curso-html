@@ -2,7 +2,7 @@
 
 ## El archivo index.html
 
-El archivo `index.html` es el punto de entrada a una pagina web. En el mismo, se ingresa código HTML para describir la estructura de la pagina.
+El archivo `index.html` es el punto de entrada a la pagina web. En el mismo, se ingresa el código HTML que va a describir la estructura de la misma.
 
 1. Crear una carpeta llamada `playground`.
 2. Crear un archivo llamado `index.html` dentro de la carpeta `playground`.
@@ -14,39 +14,34 @@ El código HTML esta formado por elementos que pueden contener:
 - Otros elementos, es decir, se permite el anidamiento de los mismos.
 - Texto.
 
-El siguiente elemento, que contiene texto, se muestra con el fin de identificar su estructura semántica:
+A continuación, se muestra un elemento que contiene texto:
 
 `<h1 class="titulo">Titulo</h1>`.
 
-Donde vemos que tiene:
+El mismo esta compuesto por:
 
 - Una etiqueta de apertura `<h1>`.
-- Un atributo con un valor `class="titulo"`.
-- El texto `Titulo`.
+- Un atributo `class="titulo"`.
+- Un texto `Titulo`.
 - Una etiqueta de cierre `</h1>`.
 
-## Estructura estándar por elementos anidados
-
-El elemento `<html></html>`, es el elemento raíz de la pagina web.
-
-Donde vemos que tiene:
+## Crear la estructura básica de elementos anidados
 
 1. Ingresar `html` dentro del archivo `index.html`.
 2. Seleccionar `html:5`.
 
-### Titulo de la pagina web
+El elemento `<html></html>`, es el elemento raíz de la pagina web.
 
-Dentro del elemento `<head></head>`, va la informacion de la pagina web.
-
-El elemento `<title></title>`, es parte de la informacion de la pagina web.
+### Título de la pagina web
 
 1. Ingresar `HTML Playground` como el texto del elemento `<title></title>`.
 
 ### Contenido de la pagina web
 
-Dentro del elemento `<body></body>`, va el contenido de la pagina web.
+Dentro del elemento `<body></body>`:
 
-1. Ingresar `<h1>Hola Mundo</h1>` dentro del elemento `<body></body>`.
+1. Ingresar `<h1>HTML Playground</h1>`.
+2. Ingresar `<hr />`.s
 
 ## Usar el Live Server
 

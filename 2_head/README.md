@@ -2,36 +2,49 @@
 
 ## Metadatos
 
-El metadato `charset`, se utiliza para indicar el juego de caracteres que tendra la pagina web.
+### Metadatos creados por defecto
 
-El resto de los metadatos, tienen el siguiente formato: ```<meta name="nombre" content="valor" http-equiv="cabecera-http" schema="esquema">```.
+- `charset`: indica el juego de caracteres que tendrá la pagina web.
 
-Por ejemplo, el siguiente metadato se utiliza para darle responsividad a la pagina web:
+- `viewport`: se usa para indicar el tamaño inicial de los elementos cuando nuestra pagina va a utilizarse en dispositivos móviles.
 
-```
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
+### Crear un metadato para indicar el autor
 
-La responsividad, implica que la pagina web se vea de forma correcta tanto en una PC como en un dispositivo movil.
-
-1. Agregar ```<meta name="author" content="valor">```.
+1. Agregar `<meta name="author" content="valor" />`.
 2. Reemplazar `valor` con nuestro nombre.
-3. Agregar ```<meta name="description" content="Este es mi Playground para HTML">```.
 
-El metadato ```<meta name="keywords" content="curso,html">``` lo utilizan los buscadores para poder encontrar nuestra pagina web. El `content`, se compone de varias palabras separadas por coma.
+### Crear un metadato para indicar una descripción
 
-## link
+1. Agregar `<meta name="description" content="texto" />`.
+2. Reemplazar `valor` con nuestra descripción.
 
-Se utiliza para agregar hojas de estilos CSS.
+### Crear un metadato para agregar palabras clave
 
-1. Agregar ```<link rel="stylesheet" href="style.css">```.
-2. Crear un archivo llamado `style.css` dentro de la carpeta `playground`.
+1. Agregar `<meta name="keywords" content="palabras" />`.
+2. Reemplazar `palabras` por nuestras palabras clave separadas por `,`.
 
-## favicon
+Las palabras clave las utilizan los robots de búsqueda para poder encontrar nuestra pagina web.
 
-Es el icono  que va a mostrar el navegador en la pestaña donde tengamos abierta nuestra pagina web.
+## Crear un elemento link para agregar una hojas de estilo CSS
+
+1. Crear un archivo llamado `style.css` dentro de la carpeta `playground`.
+2. Agregar `<link rel="stylesheet" href="style.css" />`.
+
+## Usar el inspector del navegador para depurar el código HTML
+
+1. Presionar `CTRL+SHIFT+I` cuando estamos viendo la pagina web.
+
+![Error Favicon](error_favicon.png)
+
+Aparece un error porque nuestra pagina web no tiene un favicon.
+
+## Crear un elemento link para agregar el favicon
 
 1. Descargar un icono de HTML de [ICONS8](https://icons8.com/).
-2. Guardarlo dentro de la carpeta `playground`.
-3. Renombrar el archivo del icono a `favicon.ico`.
-4. Agregar ```<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">```.
+2. Renombrar el archivo como `favicon.ico`.
+3. Pegarlo dentro de la carpeta `playground`.
+4. Agregar `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />`.
+
+El favicon es el icono que va a mostrar el navegador en la pestaña donde tengamos abierta nuestra pagina web.
+
+![Favicon Solucionado](favicon_solucionado.png)

@@ -1,16 +1,49 @@
 # Capitulo 3: Body
 
-## Javascript
+## Crear un elemento script para agregar código JAVASCRIPT
 
-Se utiliza para agregar un archivo Javascript.
+1. Crear un archivo llamado `index.js` dentro de la carpeta `playground`.
+2. Agregar `<script src="index.js"></script>` al final del elemento `<body></body>`.
 
-1. Agregar ```<script src="index.js"></script>``` al final del elemento ```<body></body>```.
-2. Crear un archivo llamado `index.js` dentro de la carpeta `playground`.
+## Comentarios
 
-## Estructura basica de la pagina web
+### Documentar el código
 
-La plataforma [miro.com](https://miro.com/app/dashboard/) se utiliza para hacer esquemas de como queremos que quede nuestra estructura HTML.
+1. Presionar `CTRL+K+C` en una linea en blanco.
+2. Ingresar un texto que dentro de `<!--  -->`.
 
-![miro](miro.png)
+```
+    <h1>HTML Playground</h1>
+    <hr />
+    <!-- Estructura semántica básica de una pagina web -->
+```
 
-Siempre utilizar los elementos adecuados para estructurar nuestra pagina web. No utilizar solo el elemento ```<div></div>```. Esto, nos permite mejorar el posicionamiento de nuestra pagina web en los buscadores.
+### Ignorar parte del código
+
+1. Seleccionar la parte del código que no queremos que se ejecute.
+2. Presionar `CTRL+K+C`.
+
+```
+    <!-- <h1>HTML Playground</h1>
+    <hr /> -->
+```
+
+![Comentar Código](comentar_codigo.png)
+
+### Dejar de ignorar parte del código
+
+1. Seleccionar la parte del código que queremos que vuelva a ejecutarse.
+2. Presionar `CTRL+K+U`.
+
+```
+    <h1>HTML Playground</h1>
+    <hr />
+```
+
+## Estructura semántica básica de la pagina web
+
+![Estructura Semántica Básica](estructura_semantica_basica.png)
+
+![Estructura Semántica Básica en el Navegador](estructura_semantica_basica_en_el_navegador.png)
+
+Cuando modifiquemos esta estructura semántica básica, podremos verificarla con la herramienta [Markup Validation Service](https://validator.w3.org/)
