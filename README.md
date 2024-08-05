@@ -26,8 +26,12 @@
 ## Atajos de teclado en VCS
 
 - `Shift+Alt+DownArrow` copia la linea donde esta el cursor abajo.
-- `Shift+Alt+ClicDerecho` permite seleccionar varias lineas para modificarlas en simultaneo.
+- `Shift+Alt+ClicDerecho` permite seleccionar texto iguales para modificarlos en simultaneo.
 - `Ctrl+Shift+L` permite seleccionar todas las apariciones de una palabra para modificarlas en simultaneo.
+- `Alt+ClicDerecho` permite seleccionar varias posiciones para para modificarlas en simultaneo.
+- `Ctrl+Shift+R` permite reordenar el código para mejorar su legibilidad.
+- `Ctrl+K+C` permite comentar el código.
+- `Ctrl+K+U` permite des-comentar el código.
 
 Apuntes y ejercicios hechos en base al material de [HTML desde cero | Curso tutorial completo gratis por Sergie Code](https://www.youtube.com/watch?v=bNV6iw13Rnk).
 
