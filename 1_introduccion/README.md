@@ -41,7 +41,7 @@ El elemento `<html></html>`, es el elemento raíz de la pagina web.
 Dentro del elemento `<body></body>`:
 
 1. Ingresar `<h1>HTML Playground</h1>`.
-2. Ingresar `<hr />`.s
+2. Ingresar `<hr />`.
 
 ## Usar el Live Server
 

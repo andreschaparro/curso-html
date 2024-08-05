@@ -1,96 +1,93 @@
-# Capitulo 4: Texto
+# Capitulo 4: Elementos de texto
 
-## Parrafo
+## Crear un párrafo
 
-Es un elemento que se utiliza para mostrar textos largos.
+1. Agregar `<p>Texto largo</p>`.
+2. Reemplazar `Texto largo` con el texto del párrafo.
 
-Si no tenemos el texto definitivo, podemos usar el texto `Lorem ipsum` a modo de prueba.
-
-1. Agregar ```<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>```.
-
-## Negrita
-
-1. Agregar ```<p>Texto en <b>negrita</b></p>```.
-
-## Cursiva
-
-1. Agregar ```<p>Texto en <i>cursiva</i></p>```.
-
-## Elementos en linea y en bloque
-
-Un parrafo es un elemento en bloque. Pero negrita y cursiva, son elementos en linea.
-
-Un elemento en bloque, toma todo el ancho posible que puede ocupar. Mientras, que un elemento en linea solo toma el ancho de su contenido.
-
-1. Agregar ```<p style="background-color: turquoise;">Elemento en bloque</p>```.
-2. Agregar ```<b style="background-color: magenta;">Elemento en linea</b>```.
-
-Ademas, los elementos en bloque ignoran los saltos de linea que tengan en su texto.
-
-3. Agregar la etiqueta:
+Si aun no tenemos el texto, podemos utilizar el `Lorem ipsum`.
 
 ```
-<p>Lorem ipsum dolor sit amet, 
-    consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, 
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident, 
-    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias distinctio
+      blanditiis ad natus totam, tempora delectus inventore eius aut rem
+      dignissimos veniam voluptatem suscipit modi dolor laboriosam non sequi
+      eligendi!
+    </p>
 ```
 
-De modo que agregar saltos de linea, solo sirve para mejorar la legibilidad del codigo.
+## Crear un texto en negrita
 
-## HTML semantico
+1. Agregar `<p>Texto en <b>negrita</b></p>`.
+2. Reemplazar `negrita` con el texto que va en negrita.
 
-El elemento ```<strong></strong>```, tambien sirve para mostrar el texto en negrita.
+## Crear un texto en cursiva
 
-El elemento ```<en></en>```, tambien sirve para mostrar el texto en cursiva.
+1. Agregar `<p>Texto en <i>cursiva</i></p>`.
+2. Reemplazar `cursiva` con el texto que va en cursiva.
 
-1. Agregar ```<p>Este texto es <strong>importante</strong></p>```.
-2. Agregar ```<p>Este texto es <en>enfatico</en></p>```.
+## Tipos de elementos
 
-Pero ademas, estos elementos son utilizados por los motores de busqueda.
+### En bloque
 
-Cuando utilizamos los elementos y atributos que mejoran nuestro posicionamiento en la web, se dice que estamos utilizando HTML semantico. Y es la forma en que debe trabajarse.
+Ocupan todo el ancho que puedan ocupar. Como por ejemplo, un párrafo.
 
-## Etiquetas sin cierre
+1. Agregar `<p style="background-color: turquoise">Elemento en bloque</p>`.
 
-El elemento en linea ```<br>```, permite introducir un salto de linea dentro de un elemento en bloque.
+Ademas, ignoran los saltos de linea que tengan dentro de su texto, tal como se vio al utilizar `Lorem ipsum`.
+
+### En linea
+
+Ocupan unicamente el ancho de su contenido. Como por ejemplo, un texto en negrita o cursiva.
+
+1. Agregar `<p>Elemento en <b style="background-color: magenta">linea</b></p>`.
+
+### Sin etiqueta de cierre
+
+- El elemento `<hr />` se utiliza para introducir una linea horizontal, tal como ya se vio.
+
+- El elemento `<br />` se utiliza para introducir un salto de linea, incluso dentro de un elemento en bloque.
 
 1. Agregar:
 
 ```
-<p>Lorem ipsum dolor sit amet, <br>
-    consectetur adipiscing elit, <br>
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-    Ut enim ad minim veniam, <br>
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
-    Excepteur sint occaecat cupidatat non proident, <br>
-    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tempore
+      sunt<br />
+      officiis explicabo excepturi, laboriosam ducimus ipsam vel similique<br />
+      molestiae ab et quae illo aperiam. Nemo velit exercitationem sint<br />
+      dignissimos!
+    </p>
 ```
 
-## Titulos
+![Tipos de Elementos](tipos_de_elementos.png)
 
-Los titulos tienen jerarquia:
+## Crear un texto en negrita del tipo semántico
 
-- ```<h1>Titulo Principal</h1>```. Se usa una vez por pagina web.
-- ```<h2>Titulo Secundario/h2>```. Se usa para indicar subcategorias dentro de la pagina web.
-- ```<h3>Otros titulos</h3>```.
-- ```<h4>Otros titulos</h4>```.
-- ```<h5>Otros titulos</h5>```.
-- ```<h6>Otros titulos</h6>```.
+1. Agregar `<p>Texto <strong>importante</strong></p>`.
+2. Reemplazar `importante` con el texto que va en negrita.
 
-1. Agregar ```h1>Titulo Principal</h1>```.
-2. Agregar ```<hr>```.
+## Crear un texto en cursiva del tipo semántico
 
-El elemento en bloque ```<hr>```, permite introducir una linea horizontal de separacion. Se lo suele colocar despues de un elemento```<h1></h1>```.
+1. Agregar `<p>Texto <em>enfático</em></p>`.
+2. Reemplazar `enfático` con el texto que va en cursiva.
 
-## Parrafo con saltos de linea y sangria
+## Crear títulos
 
-Es un elemento en bloque.
+Los títulos tienen jerarquía:
+
+- `<h1>Titulo Principal</h1>`.
+- `<h2>Titulo Secundario/h2>`.
+- `<h3>Otros Títulos</h3>`.
+- `<h4>Otros Títulos</h4>`.
+- `<h5>Otros Títulos</h5>`.
+- `<h6>Otros Títulos</h6>`.
+
+El titulo principal se utiliza una única vez en la pagina web.
+
+El titulo secundario se utiliza para indicar artículos o secciones.
+
+## Crear un párrafo con saltos de linea y/o sangria
 
 1. Agregar:
 
@@ -103,47 +100,73 @@ Es un elemento en bloque.
 </pre>
 ```
 
-## Citas
+## Crear una cita
 
-Es un elemento en linea.
+1. Agregar:
 
-1. Agregar ```<p><q cite="https://www.lanacion.com.ar">Locura es hacer la misma cosa una y otra vez esperando obtener diferentes resultados</q>Albert Einstein</p>```.
+```
+    <p>
+      <q cite="https://www.lanacion.com.ar"
+        >Locura es hacer la misma cosa una y otra vez esperando obtener
+        diferentes resultados.</q
+      >Albert Einstein
+    </p>
+```
 
-El atributo `cite`, nos permite mejorar el posicionamiento de nuestra pagina web en los buscadores
+2. Agregar:
 
-2. Agregar ```<p>En japones la forma de decir que el tiempo todo lo arregla es: <q lang="JA-ja">NANKURUNAISA</q></p>```.
+```
+    <p>
+      En japones la forma de decir que el tiempo todo lo arregla es:<q
+        lang="JA-ja"
+        >NANKURUNAISA</q
+      >
+    </p>
+```
 
-El atributo `lang`, nos permite mejorar el posicionamiento de nuestra pagina web en los buscadores.
+Los atributos `cite` y `lang` nos permiten mejorar el posicionamiento de la pagina web.
 
-## Superindice
+## Crear un texto con super-indices
 
-Es un elemento en linea.
+1. Agregar:
 
-1. Agregar ```<p>hipotenusa<sup>2</sup> = cateto opuesto<sup>2</sup> + cateto adyacente<sup>2</sup></p>```.
+```
+    <p>
+      hipotenusa<sup>2</sup> = cateto opuesto<sup>2</sup> + cateto adyacente<sup
+        >2</sup
+      >
+    </p>
+```
 
-## Subindice
+## Crear un texto con sub-indices
 
-Es un elemento en linea.
+1. Agregar `<p>El agua es: H<sub>2</sub>O</p>`.
 
-1. Agregar ```<p>El agua es: H<sub>2</sub>O</p>```.
+## Crear un texto de ayuda para las abreviaturas
 
-## Abreviaturas
+1. Agregar:
 
-Es un elemento en linea.
+```
+    <p>
+      Desde la tierra a la luna hay 384.400 <abbr title="Kilómetros">Kms</abbr>
+    </p>
+```
 
-Nos permite mostrar un mensaje de ayuda cuando el usuario pasa el cursor sobre el texto mostrado en la pagina web.
+El texto de ayuda se muestra en un cuadro emergente, luego de colocar el cursor sobre la abreviatura.
 
-1. Agregar ```<p>Desde la tierra a la luna hay 384.400 <abbr title="Kilometros">Kms</abbr></p>```.
+## Crear un enlace
 
-El atributo `title`, nos permite definir el mensaje de ayuda para mejorar la experiencia de usuario.
+1. Agregar:
 
-## Enlace
+```
+    <a href="https://www.google.com" target="_blank"
+      >Haz clic aquí para ir a google</a
+    >
+```
 
-Es un elemento en linea.
+El atributo `target="_blank"` abre el enlace en una pestaña, lo que permite que nuestra pagina no se cierre.
 
-1. Agregar ```<a href="https://www.google.com" target="_blank">Haz clic aqui para ir a google</a>```.
+Un enlace también se puede utilizar para enviar un mail o llamar por teléfono:
 
-El atributo `target="_blank"`, nos permite abrir el enlace en una pestaña. Esto es util para que nuestra pagina no se cierre.
-
-2. Agregar la etiqueta ```<a href="mailto:chaparroandres87@gmail.com">Enviar mail</a>```.
-3. Agregar la etiqueta ```<a href="tel:+591155554444">Llamar por telefono</a>```.
+2. Agregar la etiqueta `<a href="mailto:chaparroandres87@gmail.com">Enviar mail</a>`.
+3. Agregar la etiqueta `<a href="tel:+591155554444">Llamar por teléfono</a>`.
