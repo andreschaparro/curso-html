@@ -67,4 +67,4 @@
 
 - El atributo `start` nos permite hacer que una lista ordenada no empiece con el indice `1`.
 - En atributo `type` nos permite hacer que una lista ordenada utilice letras o números romanos como indice.
-- El atributo `reversed` nos permite hacer que una lista ordenada descendente.
+- El atributo `reversed` nos permite hacer una lista ordenada de forma descendente.
