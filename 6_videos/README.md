@@ -2,8 +2,10 @@
 
 ## Crear un video con auto-play
 
+Esto es util cuando queremos dejar un video reproduciéndose continuamente en una pantalla.
+
 1. Crear una carpeta llamada `video` dentro de la carpeta `assets`.
-2. Copiar un video con el nombre y extension `video.mp4` a la carpeta `video`.
+2. Copiar un video con el nombre y formato `video.mp4` a la carpeta `video`.
 3. Agregar:
 
 ```
@@ -17,12 +19,14 @@
 ```
 
 - El atributo `src` nos permite ingresar la ruta del video.
-- El atributo `controls` nos permite crear controles como los de YouTube sobre el video.
+- El atributo `controls` nos permite crear controles como los de YouTube para el video.
 - El atributo `autplay` nos permite reproducir el video automáticamente al abrir la pagina web.
-- El atributo `muted` nos permite quitar el sonido del video automáticamente al abrir la pagina web.
+- El atributo `muted` nos permite silenciar el video automáticamente al abrir la pagina web.
 - El atributo `width` nos permite definir el ancho del video en `px`.
 
 ## Crear un video sin auto-play
+
+Esto es util cuando queremos que el usuario inicie la reproducción de un video como en YouTube.
 
 1. Agregar:
 
@@ -37,5 +41,3 @@
 ```
 
 - El atributo `poster` nos permite mostrar una imagen antes de reproducir el video.
-
-Agregar un elemento `<source />` es una buena practica para mejora la legibilidad del código.
