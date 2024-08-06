@@ -21,11 +21,8 @@ La carpeta `assets` va a contener los archivos estáticos. Como por ejemplo, las
 ```
 
 - El atributo `src` nos permite ingresar la ruta de la imagen.
-
 - El atributo `alt` nos permite mostrar un texto como alternativa a la imagen. El mismo, se muestra si hubo un error al cargarla.
-
 - El atributo `width` nos permite definir el ancho de la imagen en `px`.
-
 - El atributo `height` nos permite definir el alto de la imagen en `px`.
 
 **NOTA: No utilizar `width` y `height` al mismo tiempo porque se deforma la imagen.**

@@ -45,7 +45,6 @@ Ocupan unicamente el ancho de su contenido. Como por ejemplo, un texto en negrit
 ### Sin etiqueta de cierre
 
 - El elemento `<hr />` se utiliza para introducir una linea horizontal, tal como ya se vio.
-
 - El elemento `<br />` se utiliza para introducir un salto de linea, incluso dentro de un elemento en bloque.
 
 1. Agregar:

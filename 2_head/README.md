@@ -5,7 +5,6 @@
 ### Metadatos creados por defecto
 
 - `charset`: indica el juego de caracteres que tendrá la pagina web.
-
 - `viewport`: se usa para indicar el tamaño inicial de los elementos cuando nuestra pagina va a utilizarse en dispositivos móviles.
 
 ### Crear un metadato para indicar el autor
