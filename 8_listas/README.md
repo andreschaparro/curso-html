@@ -1,79 +1,70 @@
 # Capitulo 8: Listas
 
-## Lista desordenada
+## Crear una lista desordenada
 
 1. Agregar:
 
 ```
-<h1>
-    Lista del supermercado:
-</h1>
+    <h2>Lista del supermercado</h2>
 
-<hr>
-
-<ul>
-    <li>Cafe</li>
-    <li>Azucar</li>
-    <li>Canela</li>
-    <li>Vainilla</li>
-</ul>
+    <ul>
+      <li>Cafe</li>
+      <li>Azúcar</li>
+      <li>Turrones</li>
+      <li>Galletas</li>
+    </ul>
 ```
 
-El elemento ```<ul></ul>``` representa la lista desordenada. Luego, cada elemento ```<li></li>``` es un item de la lista desordenada.
+- El elemento `<ul></ul>` nos permite crear la lista desordenada.
+- Los elementos `<li></li>` nos permiten agregar items a la lista desordenada.
 
-## Lista ordenada
+## Crear una lista ordenada
 
 1. Agregar:
 
 ```
-<h1>
-    Lista del actividades que vamos a hacer hoy:
-</h1>
+    <h2>Lista de las actividades que vamos a hacer hoy</h2>
 
-<hr>
-
-<ol>
-    <li>Lavarse los dientes</li>
-    <li>Ir a hacer las compras</li>
-    <li>Cocina</li>
-    <li>Comer</li>
-    <li>Estudiar el curso de HTML</li>
-    <li>Dormir</li>
-</ol>
+    <ol>
+      <li>Lavarme los dientes</li>
+      <li>Bañarme</li>
+      <li>Ir a hacer las compras</li>
+      <li>Cocinar</li>
+      <li>Comer</li>
+      <li>Estudiar</li>
+      <li>Dormir</li>
+    </ol>
 ```
 
-El elemento ```<ol></ol>``` representa la lista ordenada. Luego, cada elemento ```<li></li>``` es un item de la lista ordenada.
+- El elemento `<ol></ol>` nos permite crear la lista ordenada.
+- Los elementos `<li></li>` nos permiten agregar items a la lista ordenada.
 
-## Listas anidadas
+## Crear listas combinadas
 
 1. Agregar:
 
 ```
-<h1>
-    Lista del actividades que vamos a hacer hoy:
-</h1>
+    <h2>Lista de las actividades que vamos a hacer hoy</h2>
 
-<hr>
-
-<ol start="6" type="a" reversed>
-    <li>Lavarse los dientes</li>
-    <li>Ir a hacer las compras
+    <ol start="5" type="a" reversed>
+      <li>Lavarme los dientes</li>
+      <li>Bañarme</li>
+      <li>
+        Ir a hacer las compras
         <ul>
-            <li>Cafe</li>
-            <li>Azucar</li>
-            <li>Canela</li>
-            <li>Vainilla</li>
+          <li>Cafe</li>
+          <li>Azúcar</li>
+          <li>Turrones</li>
+          <li>Galletas</li>
         </ul>
-    </li>
-    <li>Cocina</li>
-    <li>Comer</li>
-    <li>Estudiar el curso de HTML</li>
-    <li>Dormir</li>
-</ol>
+      </li>
+      <li>Cocinar</li>
+      <li>Comer</li>
+      <li>Estudiar</li>
+      <li>Dormir</li>
+    </ol>
 ```
 
-Con el atributo `start`, podemos hacer que la numeracion de una lista ordenada no empiece desde `1`.
-
-Con el atributo `type`, podemos hacer que utilice letras en vez de numeros en una lista ordenada.
-
-Con el atributo `reversed`, podemos hacer que enumere de forma descendente en una lista ordenada.
+- El atributo `start` nos permite hacer que una lista ordenada no empiece con el indice `1`.
+- En atributo `type` nos permite hacer que una lista ordenada utilice letras o números romanos como indice.
+- El atributo `reversed` nos permite hacer que una lista ordenada descendente.
