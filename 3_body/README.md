@@ -44,8 +44,8 @@
 
 Los elementos semánticos son utilizados por los motores de búsqueda y mejoran nuestro posicionamiento en la web.
 
-![Estructura Semántica Básica](estructura_semantica_basica.png)
+![Estructura semántica básica](estructura_semantica_basica.png)
 
-![Estructura Semántica Básica en el Navegador](estructura_semantica_basica_en_el_navegador.png)
+![Estructura semántica básica en el navegador](estructura_semantica_basica_en_el_navegador.png)
 
 Podemos verificar errores semánticos utilizando la herramienta [Markup Validation Service](https://validator.w3.org/)

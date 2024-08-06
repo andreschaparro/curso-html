@@ -46,4 +46,4 @@ Aparece un error porque nuestra pagina web no tiene un favicon.
 
 El favicon es el icono que va a mostrar el navegador en la pestaña donde tengamos abierta nuestra pagina web.
 
-![Favicon Solucionado](favicon_solucionado.png)
+![Favicon solucionado](favicon_solucionado.png)

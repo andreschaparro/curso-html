@@ -59,7 +59,7 @@ Ocupan unicamente el ancho de su contenido. Como por ejemplo, un texto en negrit
     </p>
 ```
 
-![Tipos de Elementos](tipos_de_elementos.png)
+![Tipos de elementos](tipos_de_elementos.png)
 
 ## Crear un texto en negrita del tipo semántico
 
