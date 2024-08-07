@@ -47,7 +47,7 @@
 
 ## Incrustar una dirección de [Google Maps](https://www.google.com/maps)
 
-1. Buscar [el palacio de la pizza](https://www.google.com/maps/place/El+Palacio+de+la+Pizza/@-34.6033038,-58.3798694,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccacc2a008c3f:0xf0ccb76a4575b22e!8m2!3d-34.6033082!4d-58.3772945!16s%2Fg%2F1ym82rkrg?entry=ttu).
+1. Ir a la dirección de [El Palacio de la Pizza](https://www.google.com/maps/place/El+Palacio+de+la+Pizza/@-34.6033038,-58.3798694,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccacc2a008c3f:0xf0ccb76a4575b22e!8m2!3d-34.6033082!4d-58.3772945!16s%2Fg%2F1ym82rkrg?entry=ttu).
 2. Clic en `Compartir`.
 3. Clic en `Incorporar un mapa`.
 4. Clic en `COPIAR HTML`.
