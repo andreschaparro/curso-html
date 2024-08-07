@@ -28,7 +28,7 @@
     <hr /> -->
 ```
 
-![Comentar Código](comentar_codigo.png)
+![Comentar código](comentar_codigo.png)
 
 ### Dejar de ignorar parte del código
 
