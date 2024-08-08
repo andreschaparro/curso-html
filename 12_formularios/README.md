@@ -27,7 +27,7 @@ Los campos tienen los siguientes atributos:
 
 Las etiquetas de texto tienen el siguiente atributo:
 
-- El atributo `for` debe tener el mismo valor que el atributo `name` del campo.
+- El atributo `for` que debe tener el mismo valor que el atributo `name` del campo.
 
 ## Crear un campo del tipo contraseña
 
@@ -387,7 +387,7 @@ Los grupos tienen el siguiente atributo:
 Las opciones tienen los siguientes atributos:
 
 - El atributo `value` debe ser diferente para cada opción.
-- El atributo `selected` debe valer `selected` en la opción que deseamos que venga marcada por defecto.
+- El atributo `selected` debe valer `selected` para la opción que deseamos que venga marcada por defecto.
 
 ## Crear un botón para enviar el formulario
 
@@ -639,7 +639,7 @@ Las opciones tienen los siguientes atributos:
     </form>
 ```
 
-## Crear los atributos de un formulario
+## Agregar los atributos del formulario
 
 1. Modificar el código:
 
@@ -928,7 +928,7 @@ Las opciones tienen los siguientes atributos:
     </form>
 ```
 
-## Crear un campo del tipo texto que valide un numero mínimo y un máximo de caracteres
+## Crear un campo del tipo texto que valide una cantidad mínima y máxima de caracteres
 
 1. Modificar el código:
 
@@ -1144,7 +1144,7 @@ Las opciones tienen los siguientes atributos:
     </form>
 ```
 
-## Crear un campo del tipo numérico que valide un valor mínimo y máximo
+## Crear un campo del tipo numérico que valide un valor mínimo y uno máximo
 
 1. Modificar el código:
 
@@ -1492,11 +1492,11 @@ Cuando se necesite utilizar alguna, es recomendable buscarla en internet.
 
 ## Hackear las validaciones del código HTML
 
-Utilizando el inspector del navegador podemos borrar las validaciones de los campos del código HTML.
+Utilizando el inspector del navegador podemos borrar del código HTML las validaciones de los campos del formulario.
 
 ![Hackeo](hackeo.png)
 
-Por lo que es necesario realizarlas con un framework front-end y en el backend para evitar ser hackeados.
+Por lo que es necesario realizarlas tanto con un framework front-end y como en el backend para evitar ser hackeados.
 
 ## Crear un campo del tipo email
 
