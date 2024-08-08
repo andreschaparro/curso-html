@@ -1,393 +1,1619 @@
-# Capitulo 12: Formularios para ingresar datos que se enviaran y procesaran
+# Capitulo 12: Formularios
 
-## Formulario basico
+## Crear un formulario con un campo del tipo texto
 
 1. Agregar:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
-
     <form>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro">
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
     </form>
 ```
 
-El elemento ```<form></form>``` representa al formulario. Luego, cada elemento ```<input>``` es un campo que debemos completar.
+- El elemento `<form></form>`nos permite crear el formulario.
+- Los elementos `<input />` nos permiten crear campos en el formulario.
+- Los elementos `<label></label>` nos permiten agregarle una etiqueta de texto a los campos para poder identificarlos.
 
-El atributo `type` nos permite definir el tipo de dato del campo.
+Todos los elementos tienen el siguiente atributo:
 
-El atributo `id` nos permite identificar al elemento dentro de la pagina web.
+- El atributo `id` nos permite identificar un elemento dentro de la pagina web.
 
-El atributo `name` nos permite identificar al campo dentro del formulario.
+Los campos tienen los siguientes atributos:
 
-El atributo `value` nos permite cargar un valor de defecto al campo.
+- El atributo `type` nos permite definir el tipo de campo.
+- El atributo `name` nos permite identificar un campo dentro del formulario.
+- El atributo `value` nos permite cargarle un valor por defecto al campo.
 
-El atributo `placeholder` nos permite mostrarle al usuario un mensaje de sugerencia. Este atributo se usa mucho.
+Las etiquetas de texto tienen el siguiente atributo:
 
-Finalmente, cada elemento ```<label></label>``` se utiliza para colocar una etiqueta de texto que identifique a cada campo.
+- El atributo `for` debe tener el mismo valor que el atributo `name` del campo.
 
-Es importante que el atributo `for` de la etiqueta debe ser igual al atributo `name` del campo.
+## Crear un campo del tipo contraseña
 
-## Campos del formulario
-
-1. Agregar:
+1. Modificar el código:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
-
     <form>
-        <label for="usuario">Usuario: </label>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro">
-        <br>
-        <label for="password">Contraseña: </label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-        <br>
-        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML"> HTML
-        <input type="checkbox" name="lenguajes" value="CSS"> CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML"> HTML
-        <input type="radio" name="lenguajes" value="CSS"> CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="radio" name="lenguajes" value="REACT">REACT
-        <br>
-        <label for="programando">Años programando: </label>
-        <input type="number" id="programando" name="programando"placeholder="Escriba el numero de años que lleva programando">
-        <br>
-        <label for="archivo">Subi tu curriculum: </label>
-        <input type="file" id="archivo" name="archivo" value="file">
-        <br>
-        <label for="fecha">Fecha de inicio del curso: </label>
-        <input type="date" id="fecha" name="fecha" max="2024-07-30">
-        <br>
-        <label for="opinion">Opinion: </label>
-        <textarea id="opinion" name="opinion" placeholder="Escribi tu opinion..." rows="15" cols="60"></textarea>
-        <br>
-        <label for="pais">Seleccione el pais: </label>
-        <select name="pais" id="pais">
-            <option value="Argentina">Argentina</option>
-            <option value="Francia">Francia</option>
-            <option value="Brasil" selected="selected">Brasil</option>
-            <option value="Inglaterra">Inglaterra</option>
-        </select>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
     </form>
 ```
 
-Cada elemento ```<input>```, cuyo `type` sea `checkbox`, nos permitira elegir verdadero o falso. Si varios tienen el mismo valor en el atributo `name`, podremos saber cuales fueron marcados a traves de los atributos `value`.
+- El atributo `placeholder` nos permite mostrarle al usuario un mensaje para ayudarlo a completar el campo.
 
-Cada elemento ```<input>```, cuyo `type` sea `radio`, nos permitira seleccionar una de varias opciones. A este elemento, tambien se lo conoce como *combo*.
+No se pueden utilizar los atributos `value` y `placeholder` al mismo tiempo.
 
-Cada elemento ```<input>```, cuyo `type` sea `number`, nos permitira ingresar un numero.
+## Crear un campo del tipo checkbox
 
-Cada elemento ```<input>```, cuyo `type` sea `file`, nos permitira subir un archivo y el atributo `value` debe valer `file` para que nos muestre el nombre del archivo que subimos en el navegador.
-
-Cada elemento ```<input>```, cuyo `type` sea `date`, nos permitira ingresar una fecha y el atributo `max` nos permite indicar una fecha limite que se puede seleccionar siguiendo el formato `AÑO-MES-DIA`.
-
-El elemento ```<textarea></textarea>``` se utiliza para ingresar un texto muy largo, y con los atributos `rows` y `cols` le indicamos el tamaño que ocupara por defecto.
-
-El elemento ```<select></select>```  nos permitira seleccionar una de varias opciones dentro de un menu desplegable. Luego, cada elemento ```<option></option>``` sera una opcion. Donde el atributo `value` debe tener un valor diferente para cada opcion. Ademas, el atributo `selected` nos permite terner marcada una opcion por defecto. 
-
-Los elementos ```<option></option>``` podran agruparse con elementos ```<optgroup>/<optgroup>``` y con el atributo `label` se le puede colocar una etiqueta de texto, dentro del menu desplegable, a cada grupo.
-
-## Elementos para el envio del formulario
-
-1. Agregar:
+1. Modificar el código:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
-
     <form>
-        <label for="usuario">Usuario: </label>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro">
-        <br>
-        <label for="password">Contraseña: </label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-        <br>
-        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML"> HTML
-        <input type="checkbox" name="lenguajes" value="CSS"> CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML"> HTML
-        <input type="radio" name="lenguajes" value="CSS"> CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="radio" name="lenguajes" value="REACT">REACT
-        <br>
-        <label for="programando">Años programando: </label>
-        <input type="number" id="programando" name="programando"placeholder="Escriba el numero de años que lleva programando">
-        <br>
-        <label for="archivo">Subi tu curriculum: </label>
-        <input type="file" id="archivo" name="archivo" value="file">
-        <br>
-        <label for="fecha">Fecha de inicio del curso: </label>
-        <input type="date" id="fecha" name="fecha" max="2024-07-30">
-        <br>
-        <label for="opinion">Opinion: </label>
-        <textarea id="opinion" name="opinion" placeholder="Escribi tu opinion..." rows="15" cols="60"></textarea>
-        <br>
-        <label for="pais">Seleccione el pais: </label>
-        <select name="pais" id="pais">
-            <optgroup label="America">
-                <option value="Francia">Francia</option>
-                <option value="Inglaterra">Inglaterra</option>
-            </optgroup>
-            <optgroup label="Europa">
-                <option value="Brasil" selected="selected">Brasil</option>
-                <option value="Argentina">Argentina</option>
-            </optgroup>
-        </select>
-        <br>
-        <input type="button" value="Boton"> Boton
-        <br>
-        <input type="submit" value="Enviar"> Enviar los Datos
-        <br>
-        <input type="reset" value="Resetear"> Resetear el Formulario
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
     </form>
 ```
 
-Un elemento ```<input>```, cuyo `type` sea `button`, es solamente un boton donde el atributo `onclick` nos permite ejecutar un codigo en lenguaje JAVASCRIPT. Este tema se vera en otro curso.
+## Crear varios campos del tipo checkbox para hacer una selección multiple
 
-Un elemento ```<input>```, cuyo `type` sea `submit`, envia el formulario.
-
-Un elemento ```<input>```, cuyo `type` sea `reset`, reestablece los datos del formulario.
-
-Un elemento ````<button></button>```, se comporta de forma similar al `submit` pero ejecutando el codigo que esta en el atributo `onclick` antes de enviar el formulario.
-
-## Atributos del formulario
-
-1. Agregar:
+1. Modificar el código:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
 
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+            name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+    </form>
+```
+
+## Crear varios campos del tipo radio para seleccionar una única opción
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+    </form>
+```
+
+## Crear un campo del tipo numérico
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+    </form>
+```
+
+## Crear un campo del tipo archivo
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+    </form>
+```
+
+- Cuando el atributo `value` vale `file` nos permite obtener el nombre del archivo que subimos.
+- El atributo `multiple` nos permite subir mas de un archivo.
+
+## Crear un campo del tipo textarea para ingresar un texto largo
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+    </form>
+```
+
+- El atributo `rows` nos permite definir el alto inicial del campo.
+- El atributo `cols` nos permite definir el ancho inicial del campo.
+
+## Crear un campo del tipo select para marcar una opción de un menu desplegable
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+    </form>
+```
+
+- Los elementos `<optgroup></optgroup>` nos permite separar las opciones en grupos.
+- Los elementos `<option></option>` nos permiten crear una opción.
+
+Los grupos tienen el siguiente atributo:
+
+- El atributo `label` nos permite agregarles una etiqueta de texto para poder identificarlos.
+
+Las opciones tienen los siguientes atributos:
+
+- El atributo `value` debe ser diferente para cada opción.
+- El atributo `selected` debe valer `selected` en la opción que deseamos que venga marcada por defecto.
+
+## Crear un botón para enviar el formulario
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+    </form>
+```
+
+## Crear un botón para reiniciar los datos del formulario
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+    </form>
+```
+
+## Crear un botón para ejecutar código JAVASCRIPT
+
+1. Modificar el código:
+
+```
+    <form>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+    </form>
+```
+
+## Crear los atributos de un formulario
+
+1. Modificar el código:
+
+```
     <form action="envio.php" method="post" target="_blank">
-        <label for="usuario">Usuario: </label>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro">
-        <br>
-        <label for="password">Contraseña: </label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-        <br>
-        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML"> HTML
-        <input type="checkbox" name="lenguajes" value="CSS"> CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML"> HTML
-        <input type="radio" name="lenguajes" value="CSS"> CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="radio" name="lenguajes" value="REACT">REACT
-        <br>
-        <label for="programando">Años programando: </label>
-        <input type="number" id="programando" name="programando"placeholder="Escriba el numero de años que lleva programando">
-        <br>
-        <label for="archivo">Subi tu curriculum: </label>
-        <input type="file" id="archivo" name="archivo" value="file">
-        <br>
-        <label for="fecha">Fecha de inicio del curso: </label>
-        <input type="date" id="fecha" name="fecha" max="2024-07-30">
-        <br>
-        <label for="opinion">Opinion: </label>
-        <textarea id="opinion" name="opinion" placeholder="Escribi tu opinion..." rows="15" cols="60"></textarea>
-        <br>
-        <label for="pais">Seleccione el pais: </label>
-        <select name="pais" id="pais">
-            <optgroup label="America">
-                <option value="Francia">Francia</option>
-                <option value="Inglaterra">Inglaterra</option>
-            </optgroup>
-            <optgroup label="Europa">
-                <option value="Brasil" selected="selected">Brasil</option>
-                <option value="Argentina">Argentina</option>
-            </optgroup>
-        </select>
-        <br>
-        <input type="button" value="Boton" onclick="alert('Hola mundo 1 desde... ya lo vamos a ver!')"> Boton 1
-        <br>
-        <input type="submit" value="Enviar"> Enviar los Datos
-        <br>
-        <input type="reset" value="Resetear"> Resetear el Formulario
-        <br>
-        <button onclick="alert('Hola mundo 2 desde... ya lo vamos a ver!')">Boton 2</button>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
     </form>
 ```
 
-Para verificar el envio del formulario, necesitariamos un backend que procese el formulario y nos envie una respuesta. Este tema se vera en otro curso.
+- El atributo `action` nos permite definir la URL del backend donde se enviara la información del formulario.
+- El atributo `method` debe valer `post` porque los formularios contienen datos sensibles.
+- El atributo `target` debe valer `_blank` para que el resultado devuelto por el backend se muestre en otra pestaña y no se cierre nuestra pagina web.
 
-El atributo `action` debe tener una URL del backend, donde se enviara la informacion del formulario.
+## Crear un campo que no se pueda modificar
 
-El atributo `method` indica el verbo del protocolo HTML que se utiliza para enviar el formulario. El mismo es `post` porque el formulario contiene datos sensibles.
-
-El atributo `target` debe tener el valor `_blank` para que el resultado devuelto por el backend, se muestre en una pestaña aparte sin cerrar nuestra pagina web, tal cual se vio con enlaces.
-
-## Atributos avanzados de los campos
-
-1. Agregar:
+1. Modificar el código:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
-
     <form action="envio.php" method="post" target="_blank">
-        <label for="usuario">Usuario: </label>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro" disabled>
-        <br>
-        <label for="password">Contraseña: </label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" minlength="6" maxlength="10" pattern="[A-Za-z]{9}">
-        <small>Debe tener 9 letras mayusculas y/o minusculas</small>
-        <br>
-        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML"> HTML
-        <input type="checkbox" name="lenguajes" value="CSS"> CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML" required> HTML
-        <input type="radio" name="lenguajes" value="CSS" required> CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIPT" required>JAVASCRIPT
-        <input type="radio" name="lenguajes" value="REACT" required>REACT
-        <br>
-        <label for="programando">Años programando: </label>
-        <input type="number" id="programando" name="programando"placeholder="Escriba el numero de años que lleva programando" max="5" min="0">
-        <br>
-        <label for="archivo">Subi tu curriculum: </label>
-        <input type="file" id="archivo" name="archivo" value="file" multiple>
-        <br>
-        <label for="fecha">Fecha de inicio del curso: </label>
-        <input type="date" id="fecha" name="fecha" max="2024-07-30" required>
-        <small>Es obligatorio este campo</small>
-        <br>
-        <label for="opinion">Opinion: </label>
-        <textarea id="opinion" name="opinion" placeholder="Escribi tu opinion..." rows="15" cols="60"></textarea>
-        <br>
-        <label for="pais">Seleccione el pais: </label>
-        <select name="pais" id="pais">
-            <optgroup label="America">
-                <option value="Francia">Francia</option>
-                <option value="Inglaterra">Inglaterra</option>
-            </optgroup>
-            <optgroup label="Europa">
-                <option value="Brasil" selected="selected">Brasil</option>
-                <option value="Argentina">Argentina</option>
-            </optgroup>
-        </select>
-        <br>
-        <input type="button" value="Boton" onclick="alert('Hola mundo 1 desde... ya lo vamos a ver!')"> Boton 1
-        <br>
-        <input type="submit" value="Enviar"> Enviar los Datos
-        <br>
-        <input type="reset" value="Resetear"> Resetear el Formulario
-        <br>
-        <button onclick="alert('Hola mundo 2 desde... ya lo vamos a ver!')">Boton 2</button>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
     </form>
 ```
 
-En un elemento ```<input>```, el atributo `readonly` nos permite bloquear el campo para que el usuario no pueda modificarlo.
+## Deshabilitar un campo
 
-En un elemento ```<input>```, el atributo `disabled` es similar a `readonly` pero es mas intuitivo visualmente, lo que mejora la experiencia de usuario.
-
-En un elemento ```<input>```, cuyo `type` sea `text`, los atributos `minlength` y `maxlength` se utilizan para limitar el numero de caracteres. En caso de no cumplir con `minlength`, se mostrara un mensaje de error al enviar el formulario. Y en el caso de `maxlength`, no nos permitira ingresar caracteres de mas.
-
-En un elemento ```<input>```, el atributo `pattern`, nos permite utilizar expresiones regulares para evaluar patrones de texto. En este caso, la idea es que se deban ingresar 9 letras ya sea en mayuscula o minuscula. Y en caso de no respetar el patron, se mostrara un mensaje de error al enviar el formulario. Cuando necesitemos utilizar expresiones regulares, conviene buscarlas en internet.
-
-En un elemento ```<input>```, cuyo `type` sea `number`, los atributos `min` y `max` se utilizan para limitar el numero que se pueden ingresar. Por ejemplo, podemos evitar que el usuario ingrese numeros negativos. Y en caso de ingresar valores fuera de rango por medio del teclado, se mostrara un mensaje de error al enviar el formulario.
-
-En un elemento ```<input>```, cuyo `type` sea `file`, se puede agregar el atributo `multiple` para poder subir mas de un archivo.
-
-El atributo `required` indica que es obligatorio completar el campo para poder enviar el formulario. Si no se lo completa, se mostrara un mensaje de error al enviar el formulario.
-
-Las validaciones deben hacer tanto con un framework front-end y como en el backend. Esto se debe a que nuestra pagina se puede hackear facilmente utilizando el inspector del explorador.
-
-![Hacking](hacking.png)
-
-## Campo email
-
-1. Agregar:
+1. Modificar el código:
 
 ```
-    <h1>
-        Formularios
-    </h1>
-    <hr>
-
     <form action="envio.php" method="post" target="_blank">
-        <label for="usuario">Usuario: </label>
-        <input type="text" id="usuario" name="usuario" value="Andres Chaparro" disabled>
-        <br>
-        <label for="password">Contraseña: </label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" minlength="6" maxlength="10" pattern="[A-Za-z]{9}">
-        <small>Debe tener 9 letras mayusculas y/o minusculas</small>
-        <br>
-        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML"> HTML
-        <input type="checkbox" name="lenguajes" value="CSS"> CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML" required> HTML
-        <input type="radio" name="lenguajes" value="CSS" required> CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIPT" required>JAVASCRIPT
-        <input type="radio" name="lenguajes" value="REACT" required>REACT
-        <br>
-        <label for="programando">Años programando: </label>
-        <input type="number" id="programando" name="programando"placeholder="Escriba el numero de años que lleva programando" max="5" min="0">
-        <br>
-        <label for="archivo">Subi tu curriculum: </label>
-        <input type="file" id="archivo" name="archivo" value="file" multiple>
-        <br>
-        <label for="fecha">Fecha de inicio del curso: </label>
-        <input type="date" id="fecha" name="fecha" max="2024-07-30" required>
-        <small>Es obligatorio este campo</small>
-        <br>
-        <label for="opinion">Opinion: </label>
-        <textarea id="opinion" name="opinion" placeholder="Escribi tu opinion..." rows="15" cols="60"></textarea>
-        <br>
-        <label for="pais">Seleccione el pais: </label>
-        <select name="pais" id="pais">
-            <optgroup label="America">
-                <option value="Francia">Francia</option>
-                <option value="Inglaterra">Inglaterra</option>
-            </optgroup>
-            <optgroup label="Europa">
-                <option value="Brasil" selected="selected">Brasil</option>
-                <option value="Argentina">Argentina</option>
-            </optgroup>
-        </select>
-        <br>
-        <input type="button" value="Boton" onclick="alert('Hola mundo 1 desde... ya lo vamos a ver!')"> Boton 1
-        <br>
-        <input type="submit" value="Enviar"> Enviar los Datos
-        <br>
-        <input type="reset" value="Resetear"> Resetear el Formulario
-        <br>
-        <button onclick="alert('Hola mundo 2 desde... ya lo vamos a ver!')">Boton 2</button>
-        <br>
-        <label for="mail">Mail: </label>
-        <input type="email" id="mail" name="mail" placeholder="Ingresa tu mail" required>
+      <label for="usuario">Usuario: </label>
+      <input type="text" id="usuario" name="usuario" value="Andres Chaparro" />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
     </form>
 ```
 
-Un elemento ```<input>```, cuyo `type` sea `email`, esta preparado para verificar que el texto ingresado tenga el patron `algo@sitio.com`.
+## Crear un campo del tipo texto que valide un numero mínimo y un máximo de caracteres
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+      />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+    </form>
+```
+
+## Crear un campo del tipo fecha
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+      />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+    </form>
+```
+
+## Crear un campo del tipo numérico que valide un valor mínimo y máximo
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+      />
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+        min="0"
+        max="3"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+    </form>
+```
+
+## Crear un campo del tipo texto que valide un patrón de caracteres
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+        pattern="[A-Za-z]{9}"
+      />
+      <small>Debe tener 9 caracteres</small>
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+        min="0"
+        max="3"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+    </form>
+```
+
+Un patrón de caracteres se representa con una expresión regular o REGEX.
+
+Cuando se necesite utilizar alguna, es recomendable buscarla en internet.
+
+## Crear un campo que se deba completar de forma obligatoria para poder enviar el formulario
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+        pattern="[A-Za-z]{9}"
+        required
+      />
+      <small>Debe tener 9 caracteres</small>
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+        required
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+        min="0"
+        max="3"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+    </form>
+```
+
+## Hackear las validaciones del código HTML
+
+Utilizando el inspector del navegador podemos borrar las validaciones de los campos del código HTML.
+
+![Hackeo](hackeo.png)
+
+Por lo que es necesario realizarlas con un framework front-end y en el backend para evitar ser hackeados.
+
+## Crear un campo del tipo email
+
+1. Modificar el código:
+
+```
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+        pattern="[A-Za-z]{9}"
+        required
+      />
+      <small>Debe tener 9 caracteres</small>
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+        required
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+        min="0"
+        max="3"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+
+      <br />
+      <label for="mail">Mail: </label>
+      <input type="email" id="mail" name="mail" />
+    </form>
+```

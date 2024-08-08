@@ -314,7 +314,7 @@
       <em>3/7/2024</em>
     </span> -->
 
-    <iframe
+    <!-- <iframe
       height="200px"
       src="https://www.youtube.com/embed/CX98sH80B5Q?si=vaqkKqVpM9lv3QDT"
       title="YouTube video player"
@@ -341,7 +341,121 @@
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    ></iframe> -->
+
+    <form action="envio.php" method="post" target="_blank">
+      <label for="usuario">Usuario: </label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="Andres Chaparro"
+        minlength="4"
+        maxlength="10"
+        pattern="[A-Za-z]{9}"
+        required
+      />
+      <small>Debe tener 9 caracteres</small>
+
+      <br />
+      <label for="password">Contraseña: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Escribe aquí tu contraseña"
+        required
+      />
+
+      <br />
+      <input type="checkbox" id="condiciones" name="condiciones" /> ¿Esta de
+      acuerdo con las condiciones del contrato?
+
+      <br />
+      <input type="checkbox" name="lenguajes" value="HTML" />HTML
+      <input type="checkbox" name="lenguajes" value="CSS" />CSS
+      <input type="checkbox" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="checkbox" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <input type="radio" name="lenguajes" value="HTML" />HTML
+      <input type="radio" name="lenguajes" value="CSS" />CSS
+      <input type="radio" name="lenguajes" value="JAVASCRIPT" />JAVASCRIPT
+      <input type="radio" name="lenguajes" value="REACT" />REACT
+
+      <br />
+      <label for="programado">Años programando: </label>
+      <input
+        type="number"
+        id="programado"
+        name="programado"
+        placeholder="Años programando"
+        min="0"
+        max="3"
+      />
+
+      <br />
+      <label for="archivo">Subí tu curriculum: </label>
+      <input type="file" id="archivo" name="archivo" value="file" multiple />
+
+      <br />
+      <label for="opinion">Escribí tu opinion: </label>
+      <textarea
+        id="opinion"
+        name="opinion"
+        placeholder="Escribí tu opinion"
+        rows="10"
+        cols="50"
+      ></textarea>
+
+      <br />
+      <label for="pais">Selecciona tu país de origen: </label>
+      <select id="pais" name="pais">
+        <optgroup label="America">
+          <option value="Argentina">Argentina</option>
+          <option value="Mexico" selected="selected">Mexico</option>
+          <option value="Uruguay">Uruguay</option>
+        </optgroup>
+
+        <optgroup label="Europa">
+          <option value="Francia">Francia</option>
+          <option value="Croacia">Croacia</option>
+          <option value="España">España</option>
+        </optgroup>
+      </select>
+
+      <br />
+      <input type="submit" value="Enviar tus datos" /> Submit
+
+      <br />
+      <input type="reset" value="Resetear el formulario" />
+
+      <br />
+      <input
+        type="button"
+        onclick="alert('Dame una star en GITHUB')"
+        value="Hazme clic 1"
+      />
+
+      <br />
+      <button onclick="alert('Dame una star en GITHUB')">Hazme clic 2</button>
+
+      <br />
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" value="Andres" readonly />
+
+      <br />
+      <label for="nombre">Apellido: </label>
+      <input type="text" id="nombre" name="nombre" value="Chaparro" disabled />
+
+      <br />
+      <label for="fecha">Fecha de ingreso laboral: </label>
+      <input type="date" id="fecha" name="fecha" max="2024-08-08" />
+
+      <br />
+      <label for="mail">Mail: </label>
+      <input type="email" id="mail" name="mail" />
+    </form>
 
     <script src="index.js"></script>
   </body>
