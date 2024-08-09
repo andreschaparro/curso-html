@@ -12,7 +12,7 @@
 - [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf).
 - [Linux commands cheat sheet](https://linuxconfig.org/linux-commands-cheat-sheet).
 
-## Extensiones de Visual Code Studio
+## Extensiones de Visual Studio Code
 
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag).
