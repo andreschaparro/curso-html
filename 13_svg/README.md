@@ -1,4 +1,4 @@
-# Capitulo 12: Imágenes SVG
+# Capitulo 13: Imágenes SVG
 
 ## Incrustar una imagen SVG de [SVG REPO](https://www.svgrepo.com/)
 
