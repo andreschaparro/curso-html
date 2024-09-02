@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera página web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Texto largo, si no lo tengo puedo usar el Lorem ipsum -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, molestiae. Ea harum suscipit praesentium quo
+        reiciendis deleniti quae, quam repellat quos quibusdam? Quibusdam consectetur, possimus perspiciatis totam
+        consequuntur fugit doloribus?</p>
+
+    <p>Texto en <b>negrita</b></p>
+
+    <p>Texto en <i>cursiva</i></p>
+
+    <!-- El elemento p es un elemento en línea, es decir, va a ocupar todo el ancho de la pantalla que pueda ocupar -->
+    <!-- El texto que tengan no toma los saltos de línea en el código -->
+    <p style="background-color: cyan">Elemento en línea</p>
+
+    <!-- El elemento b es un elemento en bloque, es decir, va a limiar su ancho al tamaño de su contenido -->
+    <p>Elemento en <b style="background-color: orange;">bloque</b></p>
+
+    <p>Este texto es <strong>IMPORTANTE</strong> se muestra en negrita y tiene valor semántico</p>
+
+    <p>Este texto es <em>ENFÁTICO</em> se muestra en cursiva y tiene valor semántico</p>
+
+    <!-- Agregar saltos de línea al texto de un elemento en bloque utilizando el elemento sin cierre br -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Est, molestiae. <br>Ea harum suscipit praesentium
+        quo
+        reiciendis deleniti quae, quam repellat quos quibusdam? <br>Quibusdam consectetur, possimus perspiciatis totam
+        consequuntur fugit doloribus?</p>
+
+    <!-- Títulos (tienen jerarquía) -->
+    <h1>Título principal (Se utiliza una sola vez por página)</h1>
+    <hr>
+    <!-- El elemento en bloque sin cierre hr crea una línea divisoria horizontal que es bueno utilizarla luego del elemento h1 -->
+    <h2>Título dentro de una sección o artículo</h2>
+    <h3>Subtítulo dentro de una sección o artículo</h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+    <script src="script.js"></script>
+
+    <!-- Variante del elemento p que toma los saltos de página y la sangría introducidos en el código -->
+    <pre>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Est, molestiae.
+        Ea harum suscipit praesentium quo reiciendis deleniti quae, quam repellat quos quibusdam?
+        Quibusdam consectetur, possimus perspiciatis totam consequuntur fugit doloribus?
+    </pre>
+
+    <!-- Forma de hacer una cita con los elementos p y q -->
+    <!-- Atributos como site o lang mejoran el posicionamiento de nuestra página -->
+    <p>
+        <q cite="https://www.lanacion.com">Locura es hacer la misma cosa una y otra vez esperando obtener diferentes
+            resultados.</q>
+        Albert Einstein
+    </p>
+    <p>
+        En japones la forma de decir que el tiempo todo lo arregla es:
+        <q lang="JA-ja">NANKURUNAISA</q>
+    </p>
+
+    <!-- Superíndice -->
+    <p>hipotenusa<sup>2</sup> = cateto opuesto<sup>2</sup> + cateto adyacente<sup>2</sup></p>
+
+    <!-- Subíndice -->
+    <p>El agua es: H<sub>2</sub>O</p>
+
+    <!-- Abreviaturas -->
+    <p>Desde la tierra a la luna hay 384.400 <abbr title="Kilómetros">Kms</abbr></p>
+
+    <!-- Enlace a otra página con el elemento a o anchor-->
+    <!-- El atributo target="_blank" se utliza para que el enlace se abra en una pestaña -->
+    <a href="https://www.google.com" target="_blank">Haz clic aquí para ir a google</a>
+    <br>
+
+    <!-- otros usos para el elemento a -->
+    <a href="mailto:aaaa@aaaa.com">Enviar mail</a>
+    <br>
+    <a href="tel:+591155554444">Llamar por teléfono</a>
+</body>
+
+</html>

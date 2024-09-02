@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera página web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Dentro de assets crear la carpeta video y colocar un video dentro -->
+
+    <!-- Para agregar un video se utiliza el elemento video -->
+    <!-- El atributo controls nos permite agregar controles al video que son similares a los que tiene YouTube -->
+    <!-- El atributo autplay nos permite reproducir el video automáticamente al abrir la pagina web -->
+    <!-- El atributo muted nos permite silenciar el video automáticamente al abrir la pagina web -->
+    <!-- El atributo width nos permite cambiar el ancho de la imagen -->
+    <video src="./assets/video/video.mp4" controls autoplay muted width="500px"></video>
+
+    <!-- Otra forma de agregar un video con el objetivo de mejorar la experiencia del usuario  -->
+    <!-- No reproducir el video al abrir la página y en su lugar mostrar una imagen utilizando el atributo poster -->
+    <!-- Si ocurre algún problema al reproducirlo mostrar un mensaje de ayuda utilizando los elementos source, p, y a -->
+    <video controls muted width="500px" poster="./assets/img/imagen.png">
+        <source src="./assets/video/video.mp4" type="video/mp4">
+        <p>Tu navegador no soporta este formato para poder descargarlo haz clic <a
+                href="./assets/video/video.mp4">aquí</a></p>
+    </video>
+</body>
+
+</html>

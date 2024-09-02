@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera página web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <hr>
+
+    <!-- El elemento form nos permite crear el formulario -->
+    <!-- El elemento input nos permite agregarle campos al formulario -->
+    <!-- El elemento label nos permiten agregarle una etiqueta de texto a los campos para poder identificarlos -->
+    <!-- El atributo action nos permite definir la URL del backend donde se enviara el formulario -->
+    <!-- El atributo method indica que se debe enviar el formulario utilizando el verbo post porque tiene datos sensibles -->
+    <!-- El atributo target="_blank" hace que el resultado devuelto por el backend se muestre en otra pestaña y que no se cierre nuestra página -->
+    <form action="envio.php" method="post" target="_blank">
+        <!-- Ingrsar un texto -->
+        <!-- El atributo for de un label que debe tener el mismo valor que el atributo name del campo al que identifica -->
+        <label for="usuario">Usuario: </label>
+        <!-- El atributo id debe ser único para cada elemento dentro de la página y sirve para poder referenciarlos en CSS o JS -->
+        <!-- El atributo type nos permite definir el tipo de campo que en este caso es texto -->
+        <!-- El atributo name nos permite identificar un campo dentro del formulario -->
+        <!-- El atributo value nos permite cargarle un valor por defecto al campo -->
+        <!-- El atributo readonly evita que se pueda modificar el campo -->
+        <!-- El atributo readonly es parecido a readonly pero da una mejor experiencia de usuario -->
+        <!-- Los atributos minlength y maxlength validan una cantidad mínima y máxima de caracteres -->
+        <!-- El atributo pattern permite utlizar una expresión regular o REGEX para validar el campo y en este caso solo deja ingresar 9 letras minúsculas y/o mayúsculas -->
+        <!-- El atributo required indica que es obligatorio completar el campo para poder enviar el formulario -->
+        <input type="text" id="usuario" name="usuario" value="Andres Chaparro" minlength="4" maxlength="10"
+            pattern="[A-Za-z]{9}" required>
+        <br>
+
+        <!-- Ingresar una contraseña -->
+        <label for="password">Contraseña: </label>
+        <!-- El atributo placeholder nos permite mostrarle al usuario un mensaje de ayuda -->
+        <!-- No se pueden utilizar placeholder y value al mismo tiempo -->
+        <!-- Lo mas recomendable es utilizar placeholder -->
+        <input type="password" id="password" name="password" placeholder="Escribe aquí tu contraseña" required>
+        <br>
+
+        <!-- Elegir true o por false mediante un checkbox -->
+        <input type="checkbox" id="condiciones" name="condiciones"> ¿Esta de acuerdo con las condiciones del contrato?
+        <br>
+
+        <!-- Seleccionar varias opciones utilizando múltiples checkbox -->
+        <input type="checkbox" name="lenguajes" value="HTML">HTML
+        <input type="checkbox" name="lenguajes" value="CSS">CSS
+        <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
+        <input type="checkbox" name="lenguajes" value="REACT">REACT
+        <br>
+
+        <!-- Seleccionar una única opción de varias con radio -->
+        <input type="radio" name="lenguajes" value="HTML">HTML
+        <input type="radio" name="lenguajes" value="CSS">CSS
+        <input type="radio" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
+        <input type="radio" name="lenguajes" value="REACT">REACT
+        <br>
+
+        <!-- Ingresar un número con number -->
+        <!-- Los atributos min y max validan un valor mínimo y uno máximo -->
+        <label for="programado">Años programando: </label>
+        <input type="number" id="programado" name="programado" placeholder="Años programando" min="0" max="3">
+        <br>
+
+        <!-- Subir un archivo con file -->
+        <!-- Si el atributo value vale file se mostrará de forma automática el nombre del archivo que subimos -->
+        <!-- El atributo multiple nos permite subir mas de un archivo -->
+        <label for="archivo">Subí tu curriculum: </label>
+        <input type="file" id="archivo" name="archivo" value="file" multiple>
+        <br>
+
+        <!-- Ingresar un texto largo utilizando el elemento textarea -->
+        <!-- El atributo rows nos permite definir el alto inicial del campo -->
+        <!-- El atributo cols nos permite definir el ancho inicial del campo -->
+        <textarea id="opinion" name="opinion" placeholder="Escribí tu opinion" rows="10" cols="50"></textarea>
+        <br>
+
+        <!-- Seleccionar una opción de un menu desplegable utilizando el elemento select -->
+        <label for="pais">Selecciona tu país de origen: </label>
+        <select id="pais" name="pais">
+            <!-- El elemento optgroup nos permite separar las opciones en grupos -->
+            <!-- El atributo label nos permite agregarles una etiqueta de texto para poder identificarlos -->
+            <optgroup label="America">
+                <!-- Los elementos option nos permiten crear opciones -->
+                <!-- El atributo value debe ser diferente para cada opción -->
+                <!-- El atributo selected nos permite marcar una opción por defecto -->
+                <option value="Argentina">Argentina</option>
+                <option value="Mexico" selected="selected">Mexico</option>
+                <option value="Uruguay">Uruguay</option>
+            </optgroup>
+
+            <optgroup label="Europa">
+                <option value="Francia">Francia</option>
+                <option value="Croacia">Croacia</option>
+                <option value="España">España</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <!-- Ingresar una fecha -->
+        <label for="fecha">Fecha de ingreso laboral: </label>
+        <input type="date" id="fecha" name="fecha" max="2024-08-08">
+        <br>
+
+        <!-- Ingresar un email -->
+        <!-- No hace falta una expresión regular para validar el campo porque lo hace el mismo campo -->
+        <label for="mail">Mail: </label>
+        <input type="email" id="mail" name="mail">
+        <br>
+
+        <!-- Botón normal que no ejecuta nada por defecto sobre el formulario pero puede ejecutar código JS -->
+        <input type="button" onclick="alert('Dame una star en GITHUB')" value="Hazme clic"> Button
+        <br>
+
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Enviar tus datos"> Submit
+        <br>
+
+        <!-- Botón para reiniciar el formulario -->
+        <input type="reset" value="Resetear el formulario">
+        <br>
+    </form>
+
+</body>
+
+</html>

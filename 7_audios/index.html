@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera página web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Dentro de assets crear la carpeta audio y colocar un mp3 dentro -->
+
+    <!-- Para agregar un audio se utiliza el elemento audio -->
+    <!-- El atributo controls nos permite agregar controles al audio que son similares a los que tiene YouTube -->
+    <!-- El atributo autplay nos permite reproducir el audio automáticamente al abrir la pagina web -->
+    <!-- El atributo muted nos permite silenciar el audio automáticamente al abrir la pagina web -->
+    <audio controls muted autoplay>
+        <source src="./assets/audio/audio.mp3" type="audio/mp3" />
+        <p>
+            Tu navegador no soporta este formato para poder descargarlo haz clic
+            <a href="./assets/audio/audio.mp3">aquí</a>
+        </p>
+    </audio>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+table {
+    /* Borde exterior de la tabla pegado al borde interior*/
+    border-collapse: collapse;
+    /* Borde exterior de la tabla de 2 pixeles de grosor y de un color gris */
+    border: 2px solid rgb(200, 200, 200);
+    /* Separación entre las letras */
+    letter-spacing: 1px;
+    /* Fuente un poco mas chica */
+    font-size: 0.8rem;
+}
+td {
+    /* Borde interior de la tabla de 1 pixel de grosor y de un color gris mas oscuro */
+    border: 1px solid rgb(190, 190, 190);
+    /* Separación interna de las celdas de cada fila */
+    padding: 10px 20px;
+}
+th {
+    /* Borde interior de la tabla de 1 pixel de grosor y de un color gris mas oscuro */
+    border: 1px solid rgb(190, 190, 190);
+    /* Separación interna de las celdas de la fila de etiquetas*/
+    padding: 10px 20px;
+    /* El color de fondo de la fila de etiquetas es el gris mas oscuro */
+    background-color: grey;
+}
