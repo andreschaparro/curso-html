@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima, la perrita de tres patas</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos para el video */
+        video {
+            width: 300px;
+        }
+
+        /* Estilos para la galeria de imagenes */
+        .galeria {
+            margin: 5px;
+            border: 2px solid rgb(200, 200, 200);
+        }
+
+        .descripcion {
+            padding: 15px;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        /* Otros estilos */
+        footer {
+            text-align: center;
+            background-color: violet;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: pink;
+        }
+
+        .centrado {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lima, la perrita de tres patas</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./preferencias.html">Preferencias</a></li>
+            <li><a href="./audiovisuales.html">Audiovisuales</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="centrado">
+            <video controls autoplay muted>
+                <source src="./assets/video/video.mp4" type="video/mp4">
+                <p>Tu navegador no soporta este formato para poder descargarlo haz clic <a
+                        href="./assets/video/video.mp4">aquí</a></p>
+            </video>
+        </div>
+        <div class="centrado">
+            <audio controls autoplay>
+                <source src="./assets/audio/audio.mp3" type="audio/mp3">
+                <p>
+                    Tu navegador no soporta este formato para poder descargarlo haz clic
+                    <a href="./assets/audio/audio.mp3">aquí</a>
+                </p>
+            </audio>
+        </div>
+        <div class="centrado">
+            <div class="galeria">
+                <a href="./assets/img/imagen4.png" target="_blank"><img src="./assets/img/imagen4.png"
+                        alt="Lima imagen 4"></a>
+                <div class="descripcion">Lima imagen 4</div>
+            </div>
+            <div class="galeria">
+                <a href="./assets/img/imagen5.png" target="_blank"><img src="./assets/img/imagen5.png"
+                        alt="Lima imagen 5"></a>
+
+                <div class="descripcion">Lima imagen 5</div>
+            </div>
+            <div class="galeria">
+                <a href="./assets/img/imagen6.png" target="_blank"><img src="./assets/img/imagen6.png"
+                        alt="Lima imagen 6"></a>
+                <div class="descripcion">Lima imagen 6</div>
+            </div>
+            <div class="galeria">
+                <a href="./assets/img/imagen7.png" target="_blank"><img src="./assets/img/imagen7.png"
+                        alt="Lima imagen 7"></a>
+                <div class="descripcion">Lima imagen 7</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Derechos reservados &copy; 2024</p>
+    </footer>
+
+</body>
+
+</html>
