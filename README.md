@@ -23,8 +23,4 @@
 
 Repositorio hecho en base al material de [HTML desde cero | Curso tutorial completo gratis por Sergie Code](https://www.youtube.com/watch?v=bNV6iw13Rnk).
 
-## Links a proyectos subidos a Netlify
-
-- [tp_final](https://lima-la-perrita-de-3-patas.netlify.app/).
-
 Agradece al colega Sergie Code el Ing. Andres Chaparro.
